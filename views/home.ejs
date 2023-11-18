@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List By TVT</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="icon" href="/images/icon.png">
+    <script src="https://kit.fontawesome.com/5bbc143db8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Welcome to TVT's To-do List</h1>
+    <div class="grid">
+        <div class="box">
+            <h3>
+                Failing to complete your tasks?
+            </h3>
+            <h4>No worries!<br>
+            Create a To-do list to manage your personal tasks both in home and at work</h4>
+            <div class="selectbox">
+                <h2>Select the kind of To-do List you wanna make:</h2>
+                <div class="option">
+                    <a href="/today" id="today">Today</a>
+                    <a href="/work" id="work">Work</a>
+                </div>
+            </div>
+        </div>
+        <img src="/images/tasks.png" alt="TodoList">
+    </div>
+    <footer>
+        <p>Copyright © <%= new Date().getFullYear() %> Kamalesh, TVT</p>
+    </footer>
+</body>
+</html>

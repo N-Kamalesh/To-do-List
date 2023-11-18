@@ -1,0 +1,25 @@
+<%- include("./partials/header.ejs") %>
+<div class="items">
+    <div id="heading" class="box">
+        <h1><%= day %></h1>
+    </div>
+    <div class="box">
+        <form action="/today" method="post">
+            <input type="text" name="task" placeholder="New item" required autocomplete="off">
+            <button type="submit"><i class="fa-solid fa-plus" style="color: #005eff;"></i></button>
+        </form>
+        <div id="list">
+            <% if(tasks.length == 0) { %>
+                <h3>Your Today's to-do list is empty</h3>
+            <% } else { %>
+                <% for(let i = 0 ; i < tasks.length ; i++) {%>
+                    <input type="checkbox" class="taskCheckbox" id="check<%=i+1%>">
+                    <p class="tasks" id="task<%= i+1 %>"><%= tasks[i]%></p>
+                    <hr>
+                    <% }%>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>

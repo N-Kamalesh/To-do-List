@@ -1,0 +1,24 @@
+<%- include("./partials/header.ejs") %>
+<div class="items">
+    <div id="heading" class="box">
+        <h1>Work List</h1>
+    </div>
+    <div class="box">
+        <form action="/work" method="post">
+            <input type="text" name="work" placeholder="New item" required autocomplete="off">
+            <button type="submit"><i class="fa-solid fa-plus" style="color: #005eff;"></i></button>
+        </form>
+        <div id="list">
+            <% if(works.length == 0) { %>
+                <h3>You have no works</h3>
+            <% } else { %>
+                <% for(let i = 0 ; i < works.length ; i++) {%>
+                    <input type="checkbox">
+                    <p class="works" id="work<%= i+1 %>"><%= works[i]%></p>
+                    <hr>
+                    <% }%>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include("./partials/footer.ejs") %>
