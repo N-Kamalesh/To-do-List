@@ -45,6 +45,6 @@ app.post("/work", (req, res) => {
 })
 
 
-app.listen(port, (req, res) => {
+app.listen(process.env.PORT || port, (req, res) => {
     console.log("Server running on port : ", port);
 })
